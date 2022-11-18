@@ -25,3 +25,14 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+div {
+    text-align: center;
+    padding: 8px;
+}
