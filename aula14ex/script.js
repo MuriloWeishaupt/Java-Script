@@ -8,14 +8,22 @@ function contar() {
     var f = Number(txtf.value)
     var p = Number(txtp.value)
 
-    if (ini.value.lenght== 0 || fim.value.length == 0 || pas.value.length == 0 ) {
-         window.alert('[ERRO] Estão faltando Dados!')
+    if (ini.value.length == 0 || fim.value.length == 0 || pas.value.length == 0) {
+        window.alert  ('[ERRO] Dados insuficientes!')
     } else {
-        res.innerHTML = 'Contando... <br>'
-     if (i < f) {
-     }
-     for (c = i; c <= f; c += p) {
-        res.innerText += `${c} \u{1F449}`
-    }
-
-    }
+        res.innerText = ('Contando...')
+        if (p == 0) {
+            window.alert  ('Passo inválido! considerando PASSO 1')
+            p = 1
+        }
+        if (i < f) {
+            for (c = i; c <= f; c+= p) {
+                res.innerText += `${c} \u{1F449}`
+            }
+        } else {
+            for (c = i; c >= f; c-= p) {
+                res.innerText += `${c} \u{1F449}`
+            }
+        }
+    } res.innerText += `\u{1F3C1}`
+}
